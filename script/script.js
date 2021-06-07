@@ -24,7 +24,7 @@ function onClickContactList(e) {
     }
 }
 
-function isInputsValid() {
+function isInputsInvalid() {
     return (
         newName.value === '' ||
         newSurname.value === '' ||
