@@ -8,17 +8,17 @@ const newPhone = document.getElementById('adderPhone');
 const listContacts = document.getElementById('listContacts');
 
 
-document.getElementById('adderBtn').addEventListener('click', onClickAddContact);
-listContacts.addEventListener('click', onClickContactList);
+document.getElementById('adderBtn').addEventListener('click', onAddContactClick);
+listContacts.addEventListener('click', onContactListClick);
 
-function onClickAddContact() {
-    if (!isInputsValid()) {
+function onAddContactClick() {
+    if (!isInputsInvalid()) {
         addContact(newName.value, newSurname.value, newPhone.value, listContacts);
         resetForms();
     }
 }
 
-function onClickContactList(e) {
+function onContactListClick(e) {
     if (e.target.classList.contains('delete-btn')) {
         deleteElem(e.target.closest('.list__item'));
     }
